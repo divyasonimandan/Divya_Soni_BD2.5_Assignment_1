@@ -306,7 +306,7 @@ app.get('/products/filter/rom', (req, res) => {
 // Endpoint 6: Filter the products based on the “Brand” option.
 
 function filterByBrand(product, brand) {
-  return product.brand === brand;
+  return product.brand.toLowerCase() === brand.toLowerCase();
 }
 
 app.get('/products/filter/brand', (req, res) => {
@@ -319,7 +319,8 @@ app.get('/products/filter/brand', (req, res) => {
 // Endpoint 7: Filter the products based on the “OS” option.
 
 function filterByOs(product, os) {
-  return product.os === os;
+  console.log(product.os, os)
+  return product.os.toLowerCase() === os.toLowerCase();
 }
 
 app.get('/products/filter/os', (req, res) => {
