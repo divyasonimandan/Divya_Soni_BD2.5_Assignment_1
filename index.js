@@ -345,7 +345,6 @@ app.get('/products/price/:price', (req, res) => {
 // Endpoint 8: Send original array of products.
 
 app.get('/products', (req, res) => {
- let products = req.params.products
   res.json(products);
 })
 
